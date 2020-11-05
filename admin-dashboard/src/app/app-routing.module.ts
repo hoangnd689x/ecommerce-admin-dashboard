@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-// import { ProductListComponent } from './product/product-list/product-list.component';
-// import { AddProductComponent } from './product/add-product/add-product.component';
+import { AccountListComponent } from './account/account-list/account-list.component';
+import { AddAccountComponent } from './account/add-account/add-account.component';
+import { UpdateAccountComponent } from './account/update-account/update-account.component';
 
 const routes: Routes = [
-  // { path: 'product', component: ProductListComponent },
-  // { path: 'product/add-product', component: AddProductComponent}
+  { path: 'account', component: AccountListComponent },
+  { path: 'account/add-account', component: AddAccountComponent},
+  { path: 'account/change-password/:id', component: UpdateAccountComponent}
 ];
 
 @NgModule({
