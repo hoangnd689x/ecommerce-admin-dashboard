@@ -2,8 +2,11 @@
   <a routerLink="/" style="color:azure;" ><mat-icon>dashboard</mat-icon> Admin dashboard</a>
   <div class="spacer"></div>
 
-  <a mat-button routerLink="/product">Product</a>
-  <a mat-button>Home</a>
-  <a mat-button>Home</a>
-  <a mat-button>Home</a>
+  <a mat-button *checkPermission = "'LOGIN'" style="color: azure;" routerLink="/">Login</a>
+  <a mat-button *checkPermission = "'DASHBOARD'" style="color: azure;">Dashboard</a>
+  <a mat-button *checkPermission = "'PRODUCT'" style="color: azure;" routerLink="/product" >Product</a>
+  <a mat-button *checkPermission = "'CATEGORY'" style="color: azure;">Category</a>
+  <a mat-button *checkPermission = "'ARTICLE'" style="color: azure;">Article</a>
+  <a mat-raised-button color="accent" *ngIf = "isLogIn">Logout</a>
+
 </mat-toolbar>

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { PermissionManagerService } from '../Permission/PermissionManagerService';
+import { Role } from '../Model/Permission/Role';
+
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor() { }
+  isLogIn:Boolean
+  
+  constructor(private permissionManagerS: PermissionManagerService) { 
+    this.isLogIn = false;
+  }
 
   ngOnInit() {
+    this.permissionManagerS.authAs(Role.UNKNOWN)
   }
 
 }
