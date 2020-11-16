@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { PermissionManagerService } from '../Permission/PermissionManagerService';
 import { Role } from '../Model/Permission/Role';
+import { Router } from '@angular/router';
+import { DOCUMENT } from '@angular/common';
 
 
 @Component({
@@ -9,15 +11,24 @@ import { Role } from '../Model/Permission/Role';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit {
-
-  isLogIn:Boolean
   
-  constructor(private permissionManagerS: PermissionManagerService) { 
-    this.isLogIn = false;
+  constructor(private permissionManagerS: PermissionManagerService, private router: Router, @Inject(DOCUMENT) private _document: Document) { 
+    switch (localStorage.getItem('role')) {
+      case Role.ADMIN:
+        this.router.navigate(['dashboard']); break;
+      case Role.SUPERUSER:
+        this.router.navigate(['category']); break;
+      default :
+        this.router.navigate(['']); break;
+    }
   }
 
   ngOnInit() {
-    this.permissionManagerS.authAs(Role.UNKNOWN)
+  }
+
+  logout(){
+    localStorage.setItem('role', 'unknown');
+    this._document.defaultView.location.reload();
   }
 
 }

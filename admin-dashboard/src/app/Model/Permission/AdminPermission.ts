@@ -5,7 +5,8 @@ export class AdminPermission extends PermissionBase {  constructor() {
     super();
     this.permissions = [
       PermissionType.PRODUCT, PermissionType.CATEGORY, 
-      PermissionType.ARTICLE, PermissionType.DASHBOARD
+      PermissionType.ARTICLE, PermissionType.DASHBOARD,
+      PermissionType.LOGOUT
     ];
   }
 }

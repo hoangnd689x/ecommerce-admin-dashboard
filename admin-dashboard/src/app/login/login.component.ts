@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Role } from '../Model/Permission/Role';
@@ -11,20 +12,35 @@ import { PermissionManagerService } from '../Permission/PermissionManagerService
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder, private permissionManagerS: PermissionManagerService) { }
+  constructor(private formBuilder: FormBuilder, private permissionManagerS: PermissionManagerService, private router: Router, @Inject(DOCUMENT) private _document: Document) { 
+    console.log(localStorage.getItem('role'))
+    switch (localStorage.getItem('role')) {
+      case Role.ADMIN:
+        this.router.navigate(['dashboard']); break;
+      case Role.SUPERUSER:
+        this.router.navigate(['category']); break;
+      default :
+        this.router.navigate(['']); break;
+    }
+  }
 
-  addForm: FormGroup;
+  loginForm: FormGroup;
 
   ngOnInit() {
-    this.addForm = this.formBuilder.group({
-      id: [''],
-      name: ['', Validators.required],
+    this.loginForm = this.formBuilder.group({
+      userName: [''],
+      password: ['', Validators.required],
     });
   }
 
-  onSubmit(){
+  onSubmit() {
+    console.log(this.loginForm.value);
     this.permissionManagerS.authAs(Role.ADMIN)
-    console.log("Submit");
+    this.refresh();
+  }
+
+  refresh() {
+    this._document.defaultView.location.reload();
   }
 
 }

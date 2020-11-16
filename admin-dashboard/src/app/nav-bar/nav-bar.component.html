@@ -7,6 +7,6 @@
   <a mat-button *checkPermission = "'PRODUCT'" style="color: azure;" routerLink="/product" >Product</a>
   <a mat-button *checkPermission = "'CATEGORY'" style="color: azure;">Category</a>
   <a mat-button *checkPermission = "'ARTICLE'" style="color: azure;">Article</a>
-  <a mat-raised-button color="accent" *ngIf = "isLogIn">Logout</a>
+  <a mat-raised-button *checkPermission = "'LOGOUT'" color="accent" (click) = "logout()">Logout</a>
 
 </mat-toolbar>

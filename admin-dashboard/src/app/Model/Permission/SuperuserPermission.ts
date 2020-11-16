@@ -5,7 +5,7 @@ export class SuperuserPermission extends PermissionBase {  constructor() {
     super();
     this.permissions = [
       PermissionType.PRODUCT, PermissionType.CATEGORY, 
-      PermissionType.ARTICLE
+      PermissionType.ARTICLE, PermissionType.LOGOUT
     ];
   }
 }

@@ -3,5 +3,6 @@ export enum PermissionType {
     CATEGORY ='CATEGORY',
     ARTICLE = 'ARTICLE',
     DASHBOARD = 'DASHBOARD',
-    LOGIN = 'LOGIN'
+    LOGIN = 'LOGIN',
+    LOGOUT = 'LOGOUT'
   }

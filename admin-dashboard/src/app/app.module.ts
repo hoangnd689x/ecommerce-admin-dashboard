@@ -11,13 +11,21 @@ import { ReactiveFormsModule  } from '@angular/forms'
 import { PermissionManagerService } from './Permission/PermissionManagerService';
 import { IsGrantedDirective } from './Permission/is-granted.directive';
 import { LoginComponent } from './login/login.component';
+import { CategoryListComponent } from './category/category-list/category-list.component';
+import { AddCategoryComponent } from './category/add-category/add-category.component';
+import { UpdateCategoryComponent } from './category/update-category/update-category.component';
+import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     IsGrantedDirective,
-    LoginComponent
+    LoginComponent,
+    CategoryListComponent,
+    AddCategoryComponent,
+    UpdateCategoryComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

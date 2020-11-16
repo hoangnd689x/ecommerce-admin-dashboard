@@ -8,7 +8,9 @@ export class PermissionManagerService {
     constructor() { }
 
     isGranted(permission: PermissionType) {
+        console.log(PermissionsFactory.getInstance())
         const permissions = PermissionsFactory.getInstance().permissions;
+        console.log(permissions)
         for (let perm of permissions) {
             if (perm === permission) {
                 return true;
@@ -23,8 +25,8 @@ export class PermissionManagerService {
                 ? Role.UNKNOWN
                 : role
         );
+        PermissionsFactory.updateInstance();
         this.permissions = PermissionsFactory.getInstance();
-        console.log(this.permissions);
-        console.log(localStorage.getItem('role'));
+        
     }
 }

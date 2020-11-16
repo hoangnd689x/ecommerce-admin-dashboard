@@ -17,6 +17,7 @@ export class IsGrantedDirective {
   } 
   
   private isGranted(permission: PermissionType) {
+    console.log(permission);
     if (this.permissionManagerS.isGranted(permission)) {
       this.viewContainer.createEmbeddedView(this.templateRef);
     } else {
