@@ -13,7 +13,7 @@ import { DOCUMENT } from '@angular/common';
 export class NavBarComponent implements OnInit {
   
   constructor(private permissionManagerS: PermissionManagerService, private router: Router, @Inject(DOCUMENT) private _document: Document) { 
-    switch (localStorage.getItem('role')) {
+    switch (sessionStorage.getItem('role')) {
       case Role.ADMIN:
         this.router.navigate(['dashboard']); break;
       case Role.SUPERUSER:
@@ -27,7 +27,7 @@ export class NavBarComponent implements OnInit {
   }
 
   logout(){
-    localStorage.setItem('role', 'unknown');
+    sessionStorage.setItem('role', 'unknown');
     this._document.defaultView.location.reload();
   }
 

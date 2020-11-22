@@ -18,7 +18,7 @@ export class PermissionsFactory {
   }
 
   public static updateInstance() {
-    const role = localStorage.getItem('role');
+    const role = sessionStorage.getItem('role');
     console.log('we go here '+ role)
     switch (role) {
       case Role.SUPERUSER:

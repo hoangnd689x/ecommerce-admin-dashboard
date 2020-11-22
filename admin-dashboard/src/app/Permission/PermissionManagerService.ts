@@ -20,7 +20,7 @@ export class PermissionManagerService {
     }
 
     authAs(role: Role) {
-        localStorage.setItem('role',
+        sessionStorage.setItem('role',
             (role === null)
                 ? Role.UNKNOWN
                 : role

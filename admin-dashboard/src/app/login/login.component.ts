@@ -13,8 +13,8 @@ import { PermissionManagerService } from '../Permission/PermissionManagerService
 export class LoginComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, private permissionManagerS: PermissionManagerService, private router: Router, @Inject(DOCUMENT) private _document: Document) { 
-    console.log(localStorage.getItem('role'))
-    switch (localStorage.getItem('role')) {
+    console.log(sessionStorage.getItem('role'))
+    switch (sessionStorage.getItem('role')) {
       case Role.ADMIN:
         this.router.navigate(['dashboard']); break;
       case Role.SUPERUSER:
