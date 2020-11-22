@@ -9,12 +9,18 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { AppRoutingModule } from './app-routing.module';
 // import { ProductListComponent } from './product/product-list/product-list.component';
 // import { AddProductComponent } from './product/add-product/add-product.component';
-import { ReactiveFormsModule  } from '@angular/forms'
+import { ReactiveFormsModule  } from '@angular/forms';
+import { ArticleListComponent } from './article/article-list/article-list.component';
+import { AddArticleComponent } from './article/add-article/add-article.component';
+import { UpdateArticleComponent } from './article/update-article/update-article.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent
+    NavBarComponent,
+    ArticleListComponent,
+    AddArticleComponent,
+    UpdateArticleComponent
   ],
   imports: [
     BrowserModule,
