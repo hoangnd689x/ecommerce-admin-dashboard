@@ -36,7 +36,7 @@
        <ng-container matColumnDef="action" >
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
         <td mat-cell *matCellDef="let element">
-          <button type="button" class="btn btn-success" style="margin : 5px">View Detail</button>
+          <button type="button" class="btn btn-success" style="margin : 5px" routerLink = "update-product/{{element.id}}">View Detail</button>
           <button type="button" class="btn btn-danger" style="margin : 5px">Delete</button>
 
         </td>

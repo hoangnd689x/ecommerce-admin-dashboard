@@ -27,34 +27,35 @@ export class ProductListComponent implements OnInit {
 }
 
 export interface PeriodicElement {
+  id: number;
   name: string;
   description: string;
   stock: number;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {name: 'Monitor', description: 'HP Monitor', stock: 100},
-  {name: 'Keyboard', description: 'HP Keyboard', stock: 55},
-  {name: 'Mouse', description: 'HP Mouse', stock: 63},
-  {name: 'Speaker', description: 'HP Speaker', stock: 89},
-  {name: 'Monitor', description: 'HP Monitor', stock: 100},
-  {name: 'Keyboard', description: 'HP Keyboard', stock: 55},
-  {name: 'Mouse', description: 'HP Mouse', stock: 63},
-  {name: 'Speaker', description: 'HP Speaker', stock: 89},
-  {name: 'Monitor', description: 'HP Monitor', stock: 100},
-  {name: 'Keyboard', description: 'HP Keyboard', stock: 55},
-  {name: 'Mouse', description: 'HP Mouse', stock: 63},
-  {name: 'Speaker', description: 'HP Speaker', stock: 89},
-  {name: 'Monitor', description: 'HP Monitor', stock: 100},
-  {name: 'Keyboard', description: 'HP Keyboard', stock: 55},
-  {name: 'Mouse', description: 'HP Mouse', stock: 63},
-  {name: 'Speaker', description: 'HP Speaker', stock: 89},
-  {name: 'Monitor', description: 'HP Monitor', stock: 100},
-  {name: 'Keyboard', description: 'HP Keyboard', stock: 55},
-  {name: 'Mouse', description: 'HP Mouse', stock: 63},
-  {name: 'Speaker', description: 'HP Speaker', stock: 89},
-  {name: 'Monitor', description: 'HP Monitor', stock: 100},
-  {name: 'Keyboard', description: 'HP Keyboard', stock: 55},
-  {name: 'Mouse', description: 'HP Mouse', stock: 63},
-  {name: 'Speaker', description: 'HP Speaker', stock: 89},
+  {id: 1, name: 'Monitor', description: 'HP Monitor', stock: 100},
+  {id: 2, name: 'Keyboard', description: 'HP Keyboard', stock: 55},
+  {id: 3, name: 'Mouse', description: 'HP Mouse', stock: 63},
+  {id: 4, name: 'Speaker', description: 'HP Speaker', stock: 89},
+  {id: 5, name: 'Monitor', description: 'HP Monitor', stock: 100},
+  {id: 6, name: 'Keyboard', description: 'HP Keyboard', stock: 55},
+  {id: 7, name: 'Mouse', description: 'HP Mouse', stock: 63},
+  {id: 8, name: 'Speaker', description: 'HP Speaker', stock: 89},
+  {id: 9, name: 'Monitor', description: 'HP Monitor', stock: 100},
+  {id: 10, name: 'Keyboard', description: 'HP Keyboard', stock: 55},
+  {id: 11, name: 'Mouse', description: 'HP Mouse', stock: 63},
+  {id: 12, name: 'Speaker', description: 'HP Speaker', stock: 89},
+  {id: 13, name: 'Monitor', description: 'HP Monitor', stock: 100},
+  {id: 14, name: 'Keyboard', description: 'HP Keyboard', stock: 55},
+  {id: 15, name: 'Mouse', description: 'HP Mouse', stock: 63},
+  {id: 16, name: 'Speaker', description: 'HP Speaker', stock: 89},
+  {id: 17, name: 'Monitor', description: 'HP Monitor', stock: 100},
+  {id: 18, name: 'Keyboard', description: 'HP Keyboard', stock: 55},
+  {id: 19, name: 'Mouse', description: 'HP Mouse', stock: 63},
+  {id: 20, name: 'Speaker', description: 'HP Speaker', stock: 89},
+  {id: 21, name: 'Monitor', description: 'HP Monitor', stock: 100},
+  {id: 22, name: 'Keyboard', description: 'HP Keyboard', stock: 55},
+  {id: 23, name: 'Mouse', description: 'HP Mouse', stock: 63},
+  {id: 24, name: 'Speaker', description: 'HP Speaker', stock: 89},
 ];

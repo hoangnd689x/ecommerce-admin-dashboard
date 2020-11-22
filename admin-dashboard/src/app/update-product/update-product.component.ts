@@ -4,11 +4,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-add-product',
-  templateUrl: './add-product.component.html',
-  styleUrls: ['./add-product.component.css']
+  selector: 'app-update-product',
+  templateUrl: './update-product.component.html',
+  styleUrls: ['./update-product.component.css']
 })
-export class AddProductComponent implements OnInit {
+export class UpdateProductComponent implements OnInit {
+
   addForm: FormGroup;
   public imagePath = "Choose file";
   imgURL: any = "https://breakthrough.org/wp-content/uploads/2018/10/default-placeholder-image.png";
