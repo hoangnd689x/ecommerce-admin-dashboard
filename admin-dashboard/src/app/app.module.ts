@@ -9,12 +9,14 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { AppRoutingModule } from './app-routing.module';
 // import { ProductListComponent } from './product/product-list/product-list.component';
 // import { AddProductComponent } from './product/add-product/add-product.component';
-import { ReactiveFormsModule  } from '@angular/forms'
+import { ReactiveFormsModule  } from '@angular/forms';
+import { DashboardComponent } from './dashboard/dashboard/dashboard.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent
+    NavBarComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
