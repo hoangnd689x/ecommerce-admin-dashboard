@@ -11,14 +11,26 @@ import { AppRoutingModule } from './app-routing.module';
 // import { AddProductComponent } from './product/add-product/add-product.component';
 import { ReactiveFormsModule  } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
-import { NewOrdersComponent } from './dashboard/new-orders/new-orders.component'
+import { NewOrdersComponent } from './dashboard/new-orders/new-orders.component';
+import { PermissionManagerService } from './Permission/PermissionManagerService';
+import { IsGrantedDirective } from './Permission/is-granted.directive';
+import { LoginComponent } from './login/login.component';
+import { CategoryListComponent } from './category/category-list/category-list.component';
+import { AddCategoryComponent } from './category/add-category/add-category.component';
+import { UpdateCategoryComponent } from './category/update-category/update-category.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     DashboardComponent,
-    NewOrdersComponent
+    NewOrdersComponent,
+    IsGrantedDirective,
+    LoginComponent,
+    CategoryListComponent,
+    AddCategoryComponent,
+    UpdateCategoryComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +46,7 @@ import { NewOrdersComponent } from './dashboard/new-orders/new-orders.component'
     MatPaginatorModule,
     MatSortModule
   ],
-  providers: [],
+  providers: [PermissionManagerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
