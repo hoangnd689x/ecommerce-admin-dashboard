@@ -15,8 +15,8 @@ import { NewOrdersComponent } from './dashboard/new-orders/new-orders.component'
 import { PermissionManagerService } from './Permission/PermissionManagerService';
 import { IsGrantedDirective } from './Permission/is-granted.directive';
 import { LoginComponent } from './login/login.component';
-import { CategoryListComponent } from './category/category-list/category-list.component';
 import { AddCategoryComponent } from './category/add-category/add-category.component';
+import { CategoryListComponent } from './category/category-list/category-list.component';
 import { UpdateCategoryComponent } from './category/update-category/update-category.component';
 
 @NgModule({
@@ -27,10 +27,10 @@ import { UpdateCategoryComponent } from './category/update-category/update-categ
     NewOrdersComponent,
     IsGrantedDirective,
     LoginComponent,
-    CategoryListComponent,
-    AddCategoryComponent,
     UpdateCategoryComponent,
-    DashboardComponent
+    DashboardComponent,
+    CategoryListComponent,
+    AddCategoryComponent
   ],
   imports: [
     BrowserModule,

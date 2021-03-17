@@ -5,7 +5,7 @@
   <a mat-button *checkPermission = "'LOGIN'" style="color: azure;" routerLink="/">Login</a>
   <a mat-button *checkPermission = "'DASHBOARD'" style="color: azure;">Dashboard</a>
   <a mat-button *checkPermission = "'PRODUCT'" style="color: azure;" routerLink="/product" >Product</a>
-  <a mat-button *checkPermission = "'CATEGORY'" style="color: azure;">Category</a>
+  <a mat-button *checkPermission = "'CATEGORY'" style="color: azure;" routerLink="/category">Category</a>
   <a mat-button *checkPermission = "'ARTICLE'" style="color: azure;">Article</a>
   <a mat-raised-button *checkPermission = "'LOGOUT'" color="accent" (click) = "logout()">Logout</a>
 
