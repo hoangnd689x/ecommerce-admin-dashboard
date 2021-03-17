@@ -1,0 +1,50 @@
+<h1 style="text-align: center;margin-top: 10px; margin-bottom: 10px;">Account List</h1>
+<div class="mat-elevation-z8 container">
+  <div class="row">
+    <div class="col-10">
+      <mat-form-field style="width: 100%">
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+      </mat-form-field>
+    </div>
+    <div class="col-2" style="margin : auto; display : flex; justify-content: center;">
+      <a class="btn btn-success" style="width: 100%;" routerLink = "add-account">New Account</a>
+    </div>
+  </div>
+
+  <div class="row">
+    <table mat-table [dataSource]="dataSource" matSort>
+      <!-- User Name Column -->
+      <ng-container matColumnDef="userName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> User Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.userName}} </td>
+      </ng-container>
+
+      <!-- Email Column -->
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+      </ng-container>
+
+       <!-- Role Column -->
+       <ng-container matColumnDef="role">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Role </th>
+        <td mat-cell *matCellDef="let element"> {{element.role}} </td>
+      </ng-container>
+
+       <!-- Action Column -->
+       <ng-container matColumnDef="action" >
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+        <td mat-cell *matCellDef="let element">
+          <a class="btn btn-success" style="margin : 5px" routerLink = "change-password/{{element.id}}" >Change Password</a>
+          <a class="btn btn-danger" style="margin : 5px" (click)="deletePosition(position)" >Deactivate</a>
+
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[10, 15, 20]" showFirstLastButtons></mat-paginator>
+  </div>
+</div>

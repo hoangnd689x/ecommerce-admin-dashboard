@@ -18,6 +18,9 @@ import { LoginComponent } from './login/login.component';
 import { AddCategoryComponent } from './category/add-category/add-category.component';
 import { CategoryListComponent } from './category/category-list/category-list.component';
 import { UpdateCategoryComponent } from './category/update-category/update-category.component';
+import { AddAccountComponent } from './account/add-account/add-account.component';
+import { AccountListComponent } from './account/account-list/account-list.component';
+import { UpdateAccountComponent } from './account/update-account/update-account.component'
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { UpdateCategoryComponent } from './category/update-category/update-categ
     UpdateCategoryComponent,
     DashboardComponent,
     CategoryListComponent,
-    AddCategoryComponent
+    AddCategoryComponent,
+    AccountListComponent,
+    AddAccountComponent,
+    UpdateAccountComponent
   ],
   imports: [
     BrowserModule,
