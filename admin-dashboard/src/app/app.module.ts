@@ -10,13 +10,15 @@ import { AppRoutingModule } from './app-routing.module';
 // import { ProductListComponent } from './product/product-list/product-list.component';
 // import { AddProductComponent } from './product/add-product/add-product.component';
 import { ReactiveFormsModule  } from '@angular/forms';
-import { DashboardComponent } from './dashboard/dashboard/dashboard.component'
+import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
+import { NewOrdersComponent } from './dashboard/new-orders/new-orders.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    DashboardComponent
+    DashboardComponent,
+    NewOrdersComponent
   ],
   imports: [
     BrowserModule,
