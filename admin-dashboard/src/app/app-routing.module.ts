@@ -11,6 +11,9 @@ import { UpdateCategoryComponent } from './category/update-category/update-categ
 import { AccountListComponent } from './account/account-list/account-list.component';
 import { AddAccountComponent } from './account/add-account/add-account.component';
 import { UpdateAccountComponent } from './account/update-account/update-account.component';
+import { ProductListComponent } from './product/product-list/product-list.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
+import { AddProductComponent } from './product/add-product/add-product.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -23,7 +26,10 @@ const routes: Routes = [
   { path: 'category/update-category/:id', component: UpdateCategoryComponent },
   { path: 'account', component: AccountListComponent },
   { path: 'account/add-account', component: AddAccountComponent },
-  { path: 'account/change-password/:id', component: UpdateAccountComponent }
+  { path: 'account/change-password/:id', component: UpdateAccountComponent },
+  { path: 'product', component: ProductListComponent },
+  { path: 'product/add-product', component: AddProductComponent},
+  { path: 'product/update-product/:id', component: UpdateProductComponent}
 ];
 
 @NgModule({

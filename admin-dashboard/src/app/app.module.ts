@@ -21,6 +21,9 @@ import { UpdateCategoryComponent } from './category/update-category/update-categ
 import { AddAccountComponent } from './account/add-account/add-account.component';
 import { AccountListComponent } from './account/account-list/account-list.component';
 import { UpdateAccountComponent } from './account/update-account/update-account.component'
+import { ProductListComponent } from './product/product-list/product-list.component';
+import { AddProductComponent } from './product/add-product/add-product.component';
+import { UpdateProductComponent } from './update-product/update-product.component'
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import { UpdateAccountComponent } from './account/update-account/update-account.
     AddCategoryComponent,
     AccountListComponent,
     AddAccountComponent,
-    UpdateAccountComponent
+    UpdateAccountComponent,
+    ProductListComponent,
+    AddProductComponent,
+    UpdateProductComponent
   ],
   imports: [
     BrowserModule,
